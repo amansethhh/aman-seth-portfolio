@@ -207,14 +207,9 @@ const HeroSection = () => {
             />
           </div>
 
-          {/* Resume — with dedicated slide clearance zone */}
+          {/* Resume — face shows label, slide triggers download */}
           <div className="hero-dl-wrap">
-            <a
-              href="/Aman_Seth_Full-Stack_Python_Developer_Resume.pdf"
-              download="Aman_Seth_Full-Stack_Python_Developer_Resume.pdf"
-              aria-label="Download Resume"
-              className="hero-dl-btn"
-            >
+            <div className="hero-dl-btn" aria-label="Resume download button">
               <div className="hero-dl-btn__face">
                 <svg
                   viewBox="0 0 24 24"
@@ -234,7 +229,12 @@ const HeroSection = () => {
                 </svg>
                 <span>Resume</span>
               </div>
-              <div className="hero-dl-btn__slide">
+              <a
+                href="/Aman_Seth_Full-Stack_Python_Developer_Resume.pdf"
+                download="Aman_Seth_Full-Stack_Python_Developer_Resume.pdf"
+                aria-label="Download Resume"
+                className="hero-dl-btn__slide"
+              >
                 <svg
                   viewBox="0 0 24 24"
                   width={18}
@@ -249,8 +249,8 @@ const HeroSection = () => {
                   <polyline points="7 10 12 15 17 10" />
                   <line x1={12} y1={15} x2={12} y2={3} />
                 </svg>
-              </div>
-            </a>
+              </a>
+            </div>
           </div>
         </motion.div>
       </motion.div>

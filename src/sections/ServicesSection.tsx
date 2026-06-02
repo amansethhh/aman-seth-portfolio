@@ -217,8 +217,11 @@ const ServicesSection = () => {
   })
   const isMobile = useIsMobile()
 
-  /* Derive discrete active card index from continuous scroll progress */
+  /* Derive discrete active card index from continuous scroll progress.
+     Only needed on desktop for the blur/opacity depth tiers.
+     On mobile, cards render statically — skip to avoid re-render flicker. */
   useMotionValueEvent(scrollYProgress, 'change', (latest) => {
+    if (isMobile) return
     const next = Math.min(
       Math.floor(latest * services.length),
       services.length - 1,
