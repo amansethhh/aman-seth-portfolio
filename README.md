@@ -59,22 +59,28 @@
 ## 📸 Portfolio Highlights
 
 <div align="center">
+  
+### Live Portfolio Walkthrough
+
+<img src="public/portfolio-walkthrough.gif" alt="Portfolio Walkthrough" width="90%"/>
+
+<br/><br/>
 
 ### Hero Section — Full-Screen Interactive Landing
 
-<img src="public/Hero Section.png" alt="Hero Section — Full-screen intro with parallax effects, animated typography, and scroll-driven portrait zoom" width="90%"/>
+<img src="public/Github Hero Section.png" alt="Hero Section — Full-screen intro with parallax effects, animated typography, and scroll-driven portrait zoom" width="90%"/>
 
 <br/><br/>
 
 ### Tech Stack — Interactive Technology Grid
 
-<img src="public/Tech Stack Section.png" alt="Tech Stack Section — Categorized skill grid with staggered reveal animations and floating 3D icons" width="90%"/>
+<img src="public/Github Tech Stack Section.png" alt="Tech Stack Section — Categorized skill grid with staggered reveal animations and floating 3D icons" width="90%"/>
 
 <br/><br/>
 
 ### About Section — Animated Story & Background
 
-<img src="public/About Section.png" alt="About Section — Word-by-word text reveal with floating decorative 3D icons and glassmorphism cards" width="90%"/>
+<img src="public/Github About Section.png" alt="About Section — Word-by-word text reveal with floating decorative 3D icons and glassmorphism cards" width="90%"/>
 
 </div>
 
@@ -418,9 +424,15 @@ While this is a personal portfolio, contributions and suggestions are welcome:
 I am actively seeking **Full-Stack Developer**, **Backend Engineer**, or **AI Application Developer** opportunities. Open to full-time roles, internships, and collaboration on impactful projects.
 
 **Let's connect:**
-[Portfolio](https://aman-seth-portfolio.vercel.app) · [LinkedIn](https://www.linkedin.com/in/aman-seth-a03b42257/) · [Email](mailto:amanrseth@gmail.com) · [GitHub](https://github.com/amansethhh)
 
----
+<div align="center">
+  
+[![Portfolio](https://img.shields.io/badge/Portfolio-aman--seth-A855F7?style=for-the-badge&logo=vercel&logoColor=white)](https://aman-seth-portfolio.vercel.app)
+[![LinkedIn](https://img.shields.io/badge/LinkedIn-Aman_Seth-0A66C2?style=for-the-badge&logo=linkedin&logoColor=white)](https://www.linkedin.com/in/aman-seth-a03b42257/)
+[![GitHub](https://img.shields.io/badge/GitHub-amansethhh-181717?style=for-the-badge&logo=github&logoColor=white)](https://github.com/amansethhh)
+[![Email](https://img.shields.io/badge/Email-contact-EA4335?style=for-the-badge&logo=gmail&logoColor=white)](mailto:amanrseth@gmail.com)
+
+</div>
 
 ## 📄 License
 
@@ -432,9 +444,7 @@ MIT License — see [LICENSE](LICENSE) for details.
 
 <br/>
 
-**Designed & Engineered by Aman Seth**
-
-*Building software that solves real problems.*
+**Built with ❤️ by <a href="https://github.com/amansethhh">amansethhh</a>**
 
 <br/>
 
