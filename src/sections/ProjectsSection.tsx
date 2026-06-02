@@ -175,12 +175,14 @@ const ProjectCard = ({
     </div>
   )
 
-  /* ── Mobile: simple flow card ────────────────────────── */
+  /* ── Mobile: premium flow card with entrance ──────────── */
   if (isMobile) {
     return (
-      <div style={{ marginBottom: 32 }}>
-        {cardContent}
-      </div>
+      <FadeIn delay={index * 0.12} y={50}>
+        <div style={{ marginBottom: 32 }}>
+          {cardContent}
+        </div>
+      </FadeIn>
     )
   }
 

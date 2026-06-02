@@ -118,24 +118,26 @@ const ServiceCard = ({
 }) => {
   const scale = useTransform(progress, range, [1, targetScale])
 
-  /* ── Mobile: simple card, no sticky/blur ─────────────── */
+  /* ── Mobile: premium card with entrance animation ───── */
   if (isMobile) {
     return (
-      <div style={{ marginBottom: 24 }}>
-        <motion.div
-          className="svc-card"
-          whileHover={{ y: -4, transition: { duration: 0.35, ease: 'easeOut' } }}
-        >
-          <div className="svc-card__accent" />
-          <div className="svc-card__inner">
-            <span className="svc-card__num">{service.num}</span>
-            <div className="svc-card__content">
-              <h3 className="svc-card__title">{service.name}</h3>
-              <p className="svc-card__desc">{service.description}</p>
+      <FadeIn delay={index * 0.08} y={40}>
+        <div style={{ marginBottom: 24 }}>
+          <motion.div
+            className="svc-card"
+            whileHover={{ y: -4, transition: { duration: 0.35, ease: 'easeOut' } }}
+          >
+            <div className="svc-card__accent" />
+            <div className="svc-card__inner">
+              <span className="svc-card__num">{service.num}</span>
+              <div className="svc-card__content">
+                <h3 className="svc-card__title">{service.name}</h3>
+                <p className="svc-card__desc">{service.description}</p>
+              </div>
             </div>
-          </div>
-        </motion.div>
-      </div>
+          </motion.div>
+        </div>
+      </FadeIn>
     )
   }
 

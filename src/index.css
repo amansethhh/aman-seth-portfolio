@@ -1612,22 +1612,45 @@ body {
     padding-bottom: 0;
   }
 
-  /* Background gradients — smaller on mobile */
+  /* Background gradients — premium ambient glow on mobile */
   .hero-bg--1 {
-    width: 300px;
-    height: 300px;
+    width: 350px;
+    height: 350px;
     top: 5%;
     left: 5%;
+    opacity: 0.7;
   }
 
   .hero-bg--2 {
-    width: 250px;
-    height: 250px;
+    width: 300px;
+    height: 300px;
+    opacity: 0.6;
   }
 
   .hero-bg--3 {
-    width: 200px;
-    height: 200px;
+    width: 250px;
+    height: 250px;
+    opacity: 0.5;
+  }
+
+  /* Avatar ambient glow ring */
+  .hero-portrait-anchor::after {
+    content: '';
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    width: 260px;
+    height: 260px;
+    border-radius: 50%;
+    background: radial-gradient(
+      circle,
+      rgba(168, 85, 247, 0.15) 0%,
+      rgba(118, 33, 176, 0.08) 50%,
+      transparent 70%
+    );
+    pointer-events: none;
+    z-index: -1;
   }
 }
 
@@ -1647,32 +1670,32 @@ body {
 /* ── Phase 4: Floating Icon System Mobile ─────────────── */
 
 @media (max-width: 639px) {
-  /* All floating icons: shrink, fade, no interaction */
+  /* All floating icons: refined presence, no interaction */
   .icon-float {
-    opacity: 0.35 !important;
+    opacity: 0.55 !important;
     pointer-events: none !important;
     filter:
-      drop-shadow(0 0 8px rgba(168, 85, 247, 0.12))
-      drop-shadow(0 0 14px rgba(59, 130, 246, 0.06)) !important;
+      drop-shadow(0 0 12px rgba(168, 85, 247, 0.2))
+      drop-shadow(0 0 20px rgba(59, 130, 246, 0.1)) !important;
   }
 
   .icon-float:hover {
     transform: none !important;
   }
 
-  /* Legacy aliases too */
+  /* Legacy aliases */
   .about-float-moon,
   .about-float-cube,
   .about-float-smile,
   .about-float-cursor {
-    opacity: 0.35 !important;
+    opacity: 0.55 !important;
     pointer-events: none !important;
     filter:
-      drop-shadow(0 0 8px rgba(168, 85, 247, 0.12))
-      drop-shadow(0 0 14px rgba(59, 130, 246, 0.06)) !important;
+      drop-shadow(0 0 12px rgba(168, 85, 247, 0.2))
+      drop-shadow(0 0 20px rgba(59, 130, 246, 0.1)) !important;
   }
 
-  /* Cap ALL decorative icon sizes via their Tailwind width classes */
+  /* Cap decorative icon sizes */
   [class*="w-[120px]"],
   [class*="w-[100px]"],
   [class*="w-[130px]"] {
@@ -1748,10 +1771,20 @@ body {
     padding: 80px 16px 60px;
   }
 
-  /* Disable sticky stacking — handled via TSX conditional rendering */
+  /* Premium mobile service cards — depth without sticky */
   .svc-card {
     border-radius: 24px;
     padding: 28px 22px;
+    border: 1px solid rgba(168, 85, 247, 0.12);
+    box-shadow:
+      0 2px 20px rgba(0, 0, 0, 0.4),
+      0 0 40px rgba(168, 85, 247, 0.04),
+      inset 0 1px 0 rgba(255, 255, 255, 0.06);
+  }
+
+  .svc-card__accent {
+    height: 3px;
+    opacity: 0.7;
   }
 
   .svc-card__inner {
@@ -1760,16 +1793,64 @@ body {
 
   .svc-card__num {
     font-size: 2rem;
+    background: linear-gradient(135deg, #A855F7, #7621B0);
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+    background-clip: text;
   }
 }
 
 
-/* ── Phase 8: Projects Section Mobile ─────────────────── */
+/* ── Phase 8: Projects Section Mobile (Premium) ──────── */
 
 @media (max-width: 767px) {
   /* Card image border-radius */
   .rounded-\[40px\] {
     border-radius: 20px !important;
+  }
+
+  /* Project card — premium glass depth */
+  .rounded-\[20px\] {
+    border-color: rgba(168, 85, 247, 0.1) !important;
+    box-shadow:
+      0 4px 30px rgba(0, 0, 0, 0.4),
+      0 0 50px rgba(168, 85, 247, 0.03),
+      inset 0 1px 0 rgba(255, 255, 255, 0.04) !important;
+  }
+}
+
+
+/* ── Mobile Touch Feedback (all interactive elements) ── */
+
+@media (max-width: 767px) {
+  /* Contact CTA button — active state */
+  .hero-contact-wrap a:active,
+  .hero-contact-wrap button:active {
+    transform: scale(0.97);
+    box-shadow:
+      0px 4px 4px rgba(181, 1, 167, 0.35),
+      4px 4px 16px #7721B1 inset,
+      0 0 24px rgba(182, 0, 168, 0.25);
+    -webkit-tap-highlight-color: transparent;
+  }
+
+  /* Resume button — active state */
+  .hero-dl-btn:active .hero-dl-btn__face {
+    border-color: rgba(168, 85, 247, 0.5);
+    box-shadow: 0 0 20px rgba(168, 85, 247, 0.2);
+    -webkit-tap-highlight-color: transparent;
+  }
+
+  /* Live Project button — active state */
+  .hero-dl-wrap a:active,
+  button:active {
+    -webkit-tap-highlight-color: transparent;
+  }
+
+  /* Nav links — active state */
+  .hero-nav__link:active {
+    color: #A855F7;
+    -webkit-tap-highlight-color: transparent;
   }
 }
 
@@ -1787,6 +1868,10 @@ body {
     aspect-ratio: auto;
     max-height: none;
     min-height: 100px;
+    border: 1px solid rgba(168, 85, 247, 0.1);
+    box-shadow:
+      0 2px 16px rgba(0, 0, 0, 0.3),
+      inset 0 1px 0 rgba(255, 255, 255, 0.04);
   }
 
   .stat-card__value {
@@ -1811,6 +1896,10 @@ body {
     padding: 14px 20px;
     min-height: 48px;
     border-radius: 12px;
+    border: 1px solid rgba(168, 85, 247, 0.1);
+    box-shadow:
+      0 2px 20px rgba(0, 0, 0, 0.3),
+      inset 0 1px 0 rgba(255, 255, 255, 0.05);
   }
 
   .contact-availability-badge {
@@ -1825,6 +1914,7 @@ body {
 
   .contact-achievement-item {
     padding: 6px 12px;
+    border: 1px solid rgba(168, 85, 247, 0.08);
   }
 }
 
