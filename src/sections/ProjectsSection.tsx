@@ -60,7 +60,7 @@ const projects: ProjectData[] = [
       '/Hero Section.png',
       '/Tech Stack Section.png',
     ],
-    col2Image: '/Full Portfolio Section.png',
+    col2Image: '/About Section.png',
     buttonLabel: 'Live Website',
   },
 ]
