@@ -68,7 +68,7 @@ const MarqueeSection = () => {
               src={src}
               alt=""
               loading="lazy"
-              className="w-[420px] h-[270px] rounded-2xl object-cover flex-shrink-0"
+              className="w-[240px] h-[155px] sm:w-[320px] sm:h-[205px] md:w-[420px] md:h-[270px] rounded-2xl object-cover flex-shrink-0"
             />
           ))}
         </div>
@@ -87,7 +87,7 @@ const MarqueeSection = () => {
               src={src}
               alt=""
               loading="lazy"
-              className="w-[420px] h-[270px] rounded-2xl object-cover flex-shrink-0"
+              className="w-[240px] h-[155px] sm:w-[320px] sm:h-[205px] md:w-[420px] md:h-[270px] rounded-2xl object-cover flex-shrink-0"
             />
           ))}
         </div>

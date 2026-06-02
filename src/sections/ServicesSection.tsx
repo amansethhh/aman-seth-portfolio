@@ -2,6 +2,7 @@ import { useRef, useState } from 'react'
 import { motion, useScroll, useTransform, useMotionValueEvent, MotionValue } from 'framer-motion'
 import FadeIn from '../components/FadeIn'
 import ReactivateIcon from '../components/ReactivateIcon'
+import useIsMobile from '../hooks/useIsMobile'
 
 /* ── Service data ─────────────────────────────────────── */
 
@@ -105,6 +106,7 @@ const ServiceCard = ({
   progress,
   range,
   targetScale,
+  isMobile,
 }: {
   service: ServiceData
   index: number
@@ -112,9 +114,33 @@ const ServiceCard = ({
   progress: MotionValue<number>
   range: [number, number]
   targetScale: number
+  isMobile: boolean
 }) => {
   const scale = useTransform(progress, range, [1, targetScale])
-  const rel = index - activeIndex  // negative = passed, 0 = active, positive = upcoming
+
+  /* ── Mobile: simple card, no sticky/blur ─────────────── */
+  if (isMobile) {
+    return (
+      <div style={{ marginBottom: 24 }}>
+        <motion.div
+          className="svc-card"
+          whileHover={{ y: -4, transition: { duration: 0.35, ease: 'easeOut' } }}
+        >
+          <div className="svc-card__accent" />
+          <div className="svc-card__inner">
+            <span className="svc-card__num">{service.num}</span>
+            <div className="svc-card__content">
+              <h3 className="svc-card__title">{service.name}</h3>
+              <p className="svc-card__desc">{service.description}</p>
+            </div>
+          </div>
+        </motion.div>
+      </div>
+    )
+  }
+
+  /* ── Desktop: sticky stack with depth tiers ──────────── */
+  const rel = index - activeIndex
 
   /* Directional depth:
      Active  → full clarity
@@ -187,6 +213,7 @@ const ServicesSection = () => {
     target: sectionRef,
     offset: ['start start', 'end end'],
   })
+  const isMobile = useIsMobile()
 
   /* Derive discrete active card index from continuous scroll progress */
   useMotionValueEvent(scrollYProgress, 'change', (latest) => {
@@ -225,7 +252,7 @@ const ServicesSection = () => {
       </FadeIn>
 
       {/* ━━ Sticky stacking cards ━━━━━━━━━━━━━━━━━━━━━━━━ */}
-      <div ref={sectionRef} className="max-w-4xl mx-auto relative z-[1]">
+      <div ref={sectionRef} className={`max-w-4xl mx-auto relative z-[1] ${isMobile ? '' : ''}`}>
         {services.map((service, i) => {
           const targetScale = 1 - (services.length - 1 - i) * 0.03
           return (
@@ -237,6 +264,7 @@ const ServicesSection = () => {
               progress={scrollYProgress}
               range={[i * (1 / services.length), 1]}
               targetScale={targetScale}
+              isMobile={isMobile}
             />
           )
         })}

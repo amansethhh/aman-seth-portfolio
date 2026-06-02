@@ -53,6 +53,10 @@ html, body, #root {
   -moz-osx-font-smoothing: grayscale;
 }
 
+body {
+  overflow-x: hidden;
+}
+
 /* Scroll offset so section headings aren't hidden behind the navbar */
 #about,
 #experience,
@@ -1486,3 +1490,387 @@ html, body, #root {
   background: rgba(118, 33, 176, 0.4);
   color: #D7E2EA;
 }
+
+
+/* ══════════════════════════════════════════════════════════
+   MOBILE RESPONSIVE OVERHAUL
+   All mobile-specific rules below. Desktop remains untouched.
+   ══════════════════════════════════════════════════════════ */
+
+
+/* ── Phase 2: Hero Section Mobile ─────────────────────── */
+
+@media (max-width: 767px) {
+  .hero-section {
+    height: auto;
+    min-height: 100vh;
+    min-height: 100dvh;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    padding-bottom: 32px;
+  }
+
+  /* Navbar stays absolute at top */
+  .hero-nav {
+    position: relative;
+    padding: 1rem 1rem;
+    justify-content: center;
+    gap: 20px;
+    flex-wrap: wrap;
+  }
+
+  .hero-nav__link {
+    font-size: 0.72rem;
+  }
+
+  /* BG word hidden on mobile */
+  .hero-bg-word-anchor { display: none !important; }
+
+  /* Title — relative flow */
+  .hero-title-anchor {
+    position: relative;
+    top: auto;
+    left: auto;
+    right: auto;
+    display: flex;
+    justify-content: center;
+    padding: 24px 1rem 0;
+    z-index: 5;
+    pointer-events: none;
+  }
+
+  .hero-title {
+    font-size: clamp(2.2rem, 11vw, 4rem);
+    white-space: nowrap;
+  }
+
+  /* Portrait — relative flow, constrained */
+  .hero-portrait-anchor {
+    position: relative;
+    bottom: auto;
+    left: auto;
+    right: auto;
+    display: flex;
+    justify-content: center;
+    z-index: 10;
+    pointer-events: none;
+    padding: 16px 0 0;
+  }
+
+  .hero-portrait {
+    height: auto;
+    max-height: 45vh;
+    max-width: 280px;
+    width: 100%;
+  }
+
+  /* Bottom veil — reduced */
+  .hero-bottom-veil {
+    display: none;
+  }
+
+  /* Info block — relative flow, centered */
+  .hero-info-block {
+    position: relative;
+    bottom: auto;
+    left: auto;
+    text-align: center;
+    max-width: 100%;
+    padding: 16px 20px 0;
+    z-index: 20;
+  }
+
+  .hero-info-block__text {
+    text-align: center;
+  }
+
+  .hero-info-block__text--1 { font-size: 0.85rem; }
+  .hero-info-block__text--2 { font-size: 0.78rem; }
+  .hero-info-block__text--3 { font-size: 0.72rem; }
+  .hero-info-block__text--4 { font-size: 0.68rem; }
+
+  /* Actions — relative flow, centered */
+  .hero-actions {
+    position: relative;
+    bottom: auto;
+    right: auto;
+    z-index: 20;
+    padding: 20px 20px 0;
+    width: 100%;
+    display: flex;
+    justify-content: center;
+  }
+
+  .hero-actions__inner {
+    flex-direction: row;
+    align-items: center;
+    gap: 16px;
+  }
+
+  .hero-contact-wrap {
+    padding-bottom: 0;
+  }
+
+  /* Background gradients — smaller on mobile */
+  .hero-bg--1 {
+    width: 300px;
+    height: 300px;
+    top: 5%;
+    left: 5%;
+  }
+
+  .hero-bg--2 {
+    width: 250px;
+    height: 250px;
+  }
+
+  .hero-bg--3 {
+    width: 200px;
+    height: 200px;
+  }
+}
+
+
+/* ── Phase 3: About Section Mobile ────────────────────── */
+
+@media (max-width: 639px) {
+  .about-text {
+    font-size: 0.92rem;
+    line-height: 1.75;
+    max-width: 100%;
+    padding: 0 8px;
+  }
+}
+
+
+/* ── Phase 4: Floating Icon System Mobile ─────────────── */
+
+@media (max-width: 639px) {
+  /* All floating icons: shrink, fade, no interaction */
+  .icon-float {
+    opacity: 0.35 !important;
+    pointer-events: none !important;
+    filter:
+      drop-shadow(0 0 8px rgba(168, 85, 247, 0.12))
+      drop-shadow(0 0 14px rgba(59, 130, 246, 0.06)) !important;
+  }
+
+  .icon-float:hover {
+    transform: none !important;
+  }
+
+  /* Legacy aliases too */
+  .about-float-moon,
+  .about-float-cube,
+  .about-float-smile,
+  .about-float-cursor {
+    opacity: 0.35 !important;
+    pointer-events: none !important;
+    filter:
+      drop-shadow(0 0 8px rgba(168, 85, 247, 0.12))
+      drop-shadow(0 0 14px rgba(59, 130, 246, 0.06)) !important;
+  }
+
+  /* Cap ALL decorative icon sizes via their Tailwind width classes */
+  [class*="w-[120px]"],
+  [class*="w-[100px]"],
+  [class*="w-[130px]"] {
+    max-width: 65px !important;
+  }
+}
+
+
+/* ── Phase 5: Tech Stack Mobile ───────────────────────── */
+
+@media (max-width: 639px) {
+  .ts-section {
+    padding: 80px 16px 60px;
+  }
+
+  .ts-heading {
+    margin-bottom: 40px;
+    position: relative;
+    z-index: 2;
+  }
+
+  .ts-core {
+    margin-bottom: 48px;
+  }
+
+  .ts-core-grid {
+    gap: 12px;
+  }
+
+  .ts-core-card {
+    width: 100%;
+    max-width: 280px;
+  }
+
+  .ts-categories {
+    gap: 32px;
+  }
+}
+
+
+/* ── Phase 6: Experience Mobile ───────────────────────── */
+
+@media (max-width: 639px) {
+  .exp-section {
+    padding: 80px 16px 60px;
+  }
+
+  .exp-heading {
+    margin-bottom: 40px;
+    position: relative;
+    z-index: 2;
+  }
+
+  .exp-card {
+    padding: 24px 20px;
+    border-radius: 24px;
+  }
+
+  .exp-card__header {
+    margin-bottom: 20px;
+  }
+
+  .exp-card__list {
+    gap: 12px;
+  }
+}
+
+
+/* ── Phase 7: Services Section Mobile ─────────────────── */
+
+@media (max-width: 767px) {
+  .svc-section {
+    padding: 80px 16px 60px;
+  }
+
+  /* Disable sticky stacking — handled via TSX conditional rendering */
+  .svc-card {
+    border-radius: 24px;
+    padding: 28px 22px;
+  }
+
+  .svc-card__inner {
+    gap: 16px;
+  }
+
+  .svc-card__num {
+    font-size: 2rem;
+  }
+}
+
+
+/* ── Phase 8: Projects Section Mobile ─────────────────── */
+
+@media (max-width: 767px) {
+  /* Card image border-radius */
+  .rounded-\[40px\] {
+    border-radius: 20px !important;
+  }
+}
+
+
+/* ── Phase 9: Stats Grid Mobile ───────────────────────── */
+
+@media (max-width: 479px) {
+  .stats-grid {
+    gap: 10px;
+  }
+
+  .stat-card {
+    padding: 16px 8px;
+    border-radius: 16px;
+    aspect-ratio: auto;
+    max-height: none;
+    min-height: 100px;
+  }
+
+  .stat-card__value {
+    font-size: 1.3rem;
+    margin-bottom: 6px;
+  }
+
+  .stat-card__label {
+    font-size: 0.52rem;
+  }
+}
+
+
+/* ── Phase 10: Contact Section Mobile ─────────────────── */
+
+@media (max-width: 639px) {
+  .contact-section {
+    padding: 80px 16px 60px;
+  }
+
+  .contact-card {
+    padding: 14px 20px;
+    min-height: 48px;
+    border-radius: 12px;
+  }
+
+  .contact-availability-badge {
+    font-size: 0.55rem;
+    padding: 6px 14px;
+  }
+
+  .contact-achievement-strip {
+    gap: 8px;
+    margin-bottom: 20px;
+  }
+
+  .contact-achievement-item {
+    padding: 6px 12px;
+  }
+}
+
+
+/* ── Phase 11: prefers-reduced-motion ─────────────────── */
+
+@media (prefers-reduced-motion: reduce) {
+  .icon-float,
+  .icon-reactivate,
+  .about-float-moon,
+  .about-float-cube,
+  .about-float-smile,
+  .about-float-cursor {
+    animation: none !important;
+  }
+
+  .hero-bg--1,
+  .hero-bg--2,
+  .hero-bg--3 {
+    animation: none !important;
+  }
+
+  .hero-dl-btn__slide svg polyline,
+  .hero-dl-btn__slide svg line {
+    animation: none !important;
+  }
+
+  .contact-availability-dot {
+    animation: none !important;
+  }
+
+  .skip-to-content {
+    transition: none !important;
+  }
+
+  /* Disable all CSS transitions globally for reduced-motion */
+  .svc-card,
+  .ts-core-card,
+  .ts-pill,
+  .stat-card,
+  .exp-card,
+  .contact-card,
+  .hero-dl-btn__face,
+  .hero-dl-btn__slide,
+  .hero-nav__link {
+    transition: none !important;
+  }
+}
+

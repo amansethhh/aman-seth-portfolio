@@ -3,6 +3,7 @@ import { motion, useScroll, useTransform, MotionValue } from 'framer-motion'
 import LiveProjectButton from '../components/LiveProjectButton'
 import FadeIn from '../components/FadeIn'
 import ReactivateIcon from '../components/ReactivateIcon'
+import useIsMobile from '../hooks/useIsMobile'
 
 interface ProjectData {
   num: string
@@ -71,22 +72,111 @@ const ProjectCard = ({
   progress,
   range,
   targetScale,
+  isMobile,
 }: {
   project: ProjectData
   index: number
   progress: MotionValue<number>
   range: [number, number]
   targetScale: number
+  isMobile: boolean
 }) => {
   /* Scale is driven by the PARENT container's scroll progress */
   const scale = useTransform(progress, range, [1, targetScale])
 
+  const mobileRadius = isMobile ? '20px' : undefined
+  const imgRadius = isMobile
+    ? 'rounded-[20px]'
+    : 'rounded-[40px] sm:rounded-[50px] md:rounded-[60px]'
+
+  const cardContent = (
+    <div className={`${imgRadius} border-2 border-[#D7E2EA] bg-[#0C0C0C] p-4 sm:p-6 md:p-8 shadow-2xl`}
+      style={mobileRadius ? { borderRadius: mobileRadius } : {}}
+    >
+      {/* Top row */}
+      <div className="flex flex-col sm:flex-row sm:items-center justify-between gap-4 mb-4 sm:mb-6">
+        <div className="flex items-center gap-4 sm:gap-6 md:gap-8 flex-wrap">
+          <span
+            className="font-black text-[#D7E2EA] leading-none"
+            style={{ fontSize: isMobile ? 'clamp(1.5rem, 10vw, 2.5rem)' : 'clamp(2rem, 6vw, 80px)' }}
+          >
+            {project.num}
+          </span>
+          <span className="text-[#D7E2EA]/60 font-light uppercase tracking-widest text-xs sm:text-sm">
+            {project.category}
+          </span>
+          <h3
+            className="text-[#D7E2EA] font-medium uppercase"
+            style={{ fontSize: 'clamp(1rem, 2.2vw, 1.8rem)' }}
+          >
+            {project.name}
+          </h3>
+        </div>
+        <LiveProjectButton label={project.buttonLabel || 'Live Project'} href={project.liveUrl} />
+      </div>
+
+      {/* Tech stack pills */}
+      <div className="flex flex-wrap gap-2 mb-3 sm:mb-4">
+        {project.techStack.map((tech) => (
+          <span
+            key={tech}
+            className="text-[#D7E2EA]/70 font-light border border-[#D7E2EA]/20 rounded-full px-3 py-1 text-xs"
+          >
+            {tech}
+          </span>
+        ))}
+      </div>
+
+      {/* Description */}
+      {project.description && (
+        <p className="text-[#D7E2EA]/55 font-light leading-relaxed text-sm sm:text-base mb-4 sm:mb-6 max-w-3xl">
+          {project.description}
+        </p>
+      )}
+
+      {/* Image grid */}
+      <div className="flex gap-3 sm:gap-4">
+        {/* Left column - 40% */}
+        <div className="w-[40%] flex flex-col gap-3 sm:gap-4">
+          <img
+            src={project.col1Images[0]}
+            alt={`${project.name} screenshot 1`}
+            className={`w-full ${imgRadius} object-cover`}
+            style={{ height: isMobile ? 'clamp(80px, 14vw, 130px)' : 'clamp(130px, 16vw, 230px)' }}
+            loading="lazy"
+          />
+          <img
+            src={project.col1Images[1]}
+            alt={`${project.name} screenshot 2`}
+            className={`w-full ${imgRadius} object-cover`}
+            style={{ height: isMobile ? 'clamp(100px, 18vw, 180px)' : 'clamp(160px, 22vw, 340px)' }}
+            loading="lazy"
+          />
+        </div>
+        {/* Right column - 60% */}
+        <div className="w-[60%]">
+          <img
+            src={project.col2Image}
+            alt={`${project.name} screenshot 3`}
+            className={`w-full h-full ${imgRadius} object-cover`}
+            loading="lazy"
+          />
+        </div>
+      </div>
+    </div>
+  )
+
+  /* ── Mobile: simple flow card ────────────────────────── */
+  if (isMobile) {
+    return (
+      <div style={{ marginBottom: 32 }}>
+        {cardContent}
+      </div>
+    )
+  }
+
+  /* ── Desktop: sticky stack with scale ────────────────── */
   return (
-    /*
-     * Each card container is h-screen + sticky top-0.
-     * As you scroll, each successive container stacks on top of the previous one.
-     * The card inside is offset downward by index * 28px so edges peek through.
-     */
     <div className="h-screen flex items-center justify-center sticky top-0">
       <motion.div
         className="w-full relative -top-[5vh]"
@@ -96,78 +186,7 @@ const ProjectCard = ({
           top: `calc(-5vh + ${index * 28}px)`,
         }}
       >
-        <div className="rounded-[40px] sm:rounded-[50px] md:rounded-[60px] border-2 border-[#D7E2EA] bg-[#0C0C0C] p-4 sm:p-6 md:p-8 shadow-2xl">
-          {/* Top row */}
-          <div className="flex flex-col sm:flex-row sm:items-center justify-between gap-4 mb-4 sm:mb-6">
-            <div className="flex items-center gap-4 sm:gap-6 md:gap-8 flex-wrap">
-              <span
-                className="font-black text-[#D7E2EA] leading-none"
-                style={{ fontSize: 'clamp(2rem, 6vw, 80px)' }}
-              >
-                {project.num}
-              </span>
-              <span className="text-[#D7E2EA]/60 font-light uppercase tracking-widest text-xs sm:text-sm">
-                {project.category}
-              </span>
-              <h3
-                className="text-[#D7E2EA] font-medium uppercase"
-                style={{ fontSize: 'clamp(1rem, 2.2vw, 1.8rem)' }}
-              >
-                {project.name}
-              </h3>
-            </div>
-            <LiveProjectButton label={project.buttonLabel || 'Live Project'} href={project.liveUrl} />
-          </div>
-
-          {/* Tech stack pills */}
-          <div className="flex flex-wrap gap-2 mb-3 sm:mb-4">
-            {project.techStack.map((tech) => (
-              <span
-                key={tech}
-                className="text-[#D7E2EA]/70 font-light border border-[#D7E2EA]/20 rounded-full px-3 py-1 text-xs"
-              >
-                {tech}
-              </span>
-            ))}
-          </div>
-
-          {/* Description */}
-          {project.description && (
-            <p className="text-[#D7E2EA]/55 font-light leading-relaxed text-sm sm:text-base mb-4 sm:mb-6 max-w-3xl">
-              {project.description}
-            </p>
-          )}
-
-          {/* Image grid */}
-          <div className="flex gap-3 sm:gap-4">
-            {/* Left column - 40% */}
-            <div className="w-[40%] flex flex-col gap-3 sm:gap-4">
-              <img
-                src={project.col1Images[0]}
-                alt={`${project.name} screenshot 1`}
-                className="w-full rounded-[40px] sm:rounded-[50px] md:rounded-[60px] object-cover"
-                style={{ height: 'clamp(130px, 16vw, 230px)' }}
-                loading="lazy"
-              />
-              <img
-                src={project.col1Images[1]}
-                alt={`${project.name} screenshot 2`}
-                className="w-full rounded-[40px] sm:rounded-[50px] md:rounded-[60px] object-cover"
-                style={{ height: 'clamp(160px, 22vw, 340px)' }}
-                loading="lazy"
-              />
-            </div>
-            {/* Right column - 60% */}
-            <div className="w-[60%]">
-              <img
-                src={project.col2Image}
-                alt={`${project.name} screenshot 3`}
-                className="w-full h-full rounded-[40px] sm:rounded-[50px] md:rounded-[60px] object-cover"
-                loading="lazy"
-              />
-            </div>
-          </div>
-        </div>
+        {cardContent}
       </motion.div>
     </div>
   )
@@ -223,6 +242,7 @@ const ProjectsSection = () => {
     target: sectionRef,
     offset: ['start start', 'end end'],
   })
+  const isMobile = useIsMobile()
 
   return (
     <section
@@ -268,6 +288,7 @@ const ProjectsSection = () => {
               progress={scrollYProgress}
               range={[i * (1 / projects.length), 1]}
               targetScale={targetScale}
+              isMobile={isMobile}
             />
           )
         })}

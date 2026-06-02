@@ -1,4 +1,5 @@
 import { useEffect } from 'react'
+import useIsMobile from '../hooks/useIsMobile'
 import {
   motion,
   useMotionValue,
@@ -15,6 +16,7 @@ const EASE: [number, number, number, number] = [0.25, 0.1, 0.25, 1]
 /* ════════════════════════════════════════════════════════════ */
 
 const HeroSection = () => {
+  const isMobile = useIsMobile()
   /* ── Mouse parallax (title + bg word only) ────────────── */
   const mouseX = useMotionValue(0)
   const mouseY = useMotionValue(0)
@@ -163,7 +165,7 @@ const HeroSection = () => {
       <div className="hero-bottom-veil" aria-hidden />
 
       {/* ━━ LEFT-BOTTOM: Info block with hierarchy ━━━━━━━━ */}
-      <motion.div className="hero-info-block" style={{ opacity: contentFade }}>
+      <motion.div className="hero-info-block" style={isMobile ? {} : { opacity: contentFade }}>
         <motion.div
           initial={{ opacity: 0, y: 20 }}
           animate={{ opacity: 1, y: 0 }}
@@ -185,7 +187,7 @@ const HeroSection = () => {
       </motion.div>
 
       {/* ━━ RIGHT-BOTTOM: Resume + Contact (proper spacing) ━━ */}
-      <motion.div className="hero-actions" style={{ opacity: contentFade }}>
+      <motion.div className="hero-actions" style={isMobile ? {} : { opacity: contentFade }}>
         <motion.div
           className="hero-actions__inner"
           initial={{ opacity: 0, x: 30 }}
