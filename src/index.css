@@ -182,10 +182,34 @@ body {
   font-size: 0.8rem;
   text-decoration: none;
   opacity: 0.6;
-  transition: opacity 0.25s;
+  transition: opacity 0.25s, color 0.3s;
+  position: relative;
+}
+
+.hero-nav__link::after {
+  content: '';
+  position: absolute;
+  bottom: -4px;
+  left: 0;
+  width: 100%;
+  height: 2px;
+  background: linear-gradient(90deg, #A855F7, #7C3AED);
+  border-radius: 1px;
+  transform: scaleX(0);
+  transition: transform 0.3s ease;
 }
 
 .hero-nav__link:hover { opacity: 1; }
+
+.hero-nav__link--active {
+  opacity: 1;
+  color: #C084FC;
+  text-shadow: 0 0 12px rgba(168, 85, 247, 0.3);
+}
+
+.hero-nav__link--active::after {
+  transform: scaleX(1);
+}
 
 @media (min-width: 768px) {
   .hero-nav__link { font-size: 1rem; }
@@ -518,6 +542,11 @@ body {
   0%, 100% { transform: translate(0, 0); }
   40%      { transform: translate(18px, -15px); }
   80%      { transform: translate(-12px, 20px); }
+}
+
+@keyframes hero-mobile-drift {
+  0%, 100% { transform: translateX(-15px); }
+  50%      { transform: translateX(15px); }
 }
 
 
@@ -1525,8 +1554,29 @@ body {
     font-size: 0.72rem;
   }
 
-  /* BG word hidden on mobile */
-  .hero-bg-word-anchor { display: none !important; }
+  /* BG word — mobile-optimized: subtle layered text behind avatar */
+  .hero-bg-word-anchor {
+    display: flex !important;
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -55%);
+    padding-left: 0;
+    justify-content: center;
+    width: 100%;
+    overflow: hidden;
+    z-index: 1;
+  }
+
+  .hero-bg-word {
+    font-size: clamp(2rem, 9vw, 3.2rem);
+    text-align: center;
+    white-space: normal;
+    line-height: 1.1;
+    opacity: 0.14;
+    filter: blur(1.5px);
+    animation: hero-mobile-drift 14s ease-in-out infinite;
+  }
 
   /* Title — relative flow */
   .hero-title-anchor {
@@ -1853,6 +1903,21 @@ body {
     color: #A855F7;
     -webkit-tap-highlight-color: transparent;
   }
+
+  /* ── Card microinteractions: subtle tap-scale ────────── */
+  .svc-card:active,
+  .stat-card:active,
+  .exp-card:active,
+  .contact-card:active,
+  .ts-core-card:active {
+    transform: scale(0.985);
+    transition: transform 120ms ease;
+  }
+
+  .ts-pill:active {
+    transform: scale(0.95);
+    transition: transform 100ms ease;
+  }
 }
 
 
@@ -1936,6 +2001,14 @@ body {
   .hero-bg--2,
   .hero-bg--3 {
     animation: none !important;
+  }
+
+  .hero-bg-word {
+    animation: none !important;
+  }
+
+  .hero-nav__link::after {
+    transition: none !important;
   }
 
   .hero-dl-btn__slide svg polyline,

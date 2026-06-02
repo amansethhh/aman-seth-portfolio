@@ -1,4 +1,4 @@
-import { useEffect } from 'react'
+import { useEffect, useState } from 'react'
 import useIsMobile from '../hooks/useIsMobile'
 import {
   motion,
@@ -17,6 +17,28 @@ const EASE: [number, number, number, number] = [0.25, 0.1, 0.25, 1]
 
 const HeroSection = () => {
   const isMobile = useIsMobile()
+  const [activeSection, setActiveSection] = useState('')
+
+  /* ── Intersection Observer for nav active tracking ──── */
+  useEffect(() => {
+    const ids = NAV_LINKS.map(l => l.toLowerCase())
+    const observers: IntersectionObserver[] = []
+
+    ids.forEach(id => {
+      const el = document.getElementById(id)
+      if (!el) return
+      const observer = new IntersectionObserver(
+        ([entry]) => {
+          if (entry.isIntersecting) setActiveSection(id)
+        },
+        { rootMargin: '-40% 0px -55% 0px' }
+      )
+      observer.observe(el)
+      observers.push(observer)
+    })
+
+    return () => observers.forEach(o => o.disconnect())
+  }, [])
   /* ── Mouse parallax (title + bg word only) ────────────── */
   const mouseX = useMotionValue(0)
   const mouseY = useMotionValue(0)
@@ -112,7 +134,9 @@ const HeroSection = () => {
           <a
             key={link}
             href={`#${link.toLowerCase()}`}
-            className="hero-nav__link"
+            className={`hero-nav__link${
+              activeSection === link.toLowerCase() ? ' hero-nav__link--active' : ''
+            }`}
             onClick={(e) => {
               e.preventDefault()
               smoothScrollTo(link.toLowerCase())
