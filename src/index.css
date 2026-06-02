@@ -3,6 +3,32 @@
 @tailwind utilities;
 
 /* ══════════════════════════════════════════════════════════
+   SKIP-TO-CONTENT (accessibility)
+   ══════════════════════════════════════════════════════════ */
+
+.skip-to-content {
+  position: fixed;
+  top: -100%;
+  left: 50%;
+  transform: translateX(-50%);
+  z-index: 9999;
+  padding: 12px 24px;
+  background: #A855F7;
+  color: #fff;
+  font-size: 0.9rem;
+  font-weight: 600;
+  text-decoration: none;
+  border-radius: 0 0 8px 8px;
+  transition: top 0.2s ease;
+}
+
+.skip-to-content:focus {
+  top: 0;
+  outline: 2px solid #fff;
+  outline-offset: 2px;
+}
+
+/* ══════════════════════════════════════════════════════════
    GLOBAL
    ══════════════════════════════════════════════════════════ */
 
