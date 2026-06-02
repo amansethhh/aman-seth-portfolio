@@ -219,7 +219,7 @@ const projDecorativeImages = [
     src: '/Rocket Launch.webp',
     alt: 'Rocket Launch 3D icon',
     className:
-      'w-[100px] sm:w-[140px] md:w-[144px] lg:w-[180px] absolute bottom-[4%] left-[3%] sm:left-[6%] md:left-[10%]',
+      'w-[100px] sm:w-[140px] md:w-[144px] lg:w-[180px] absolute bottom-[8%] left-[1%] sm:left-[4%] md:left-[8%]',
     animClass: 'icon-float icon-phase-5',
     fadeIn: { delay: 0.25, x: -80, y: 0, duration: 0.9 },
   },
@@ -235,7 +235,7 @@ const projDecorativeImages = [
     src: '/Connected Project Network.webp',
     alt: 'Connected Project Network 3D icon',
     className:
-      'about-hide-mobile w-[130px] sm:w-[170px] md:w-[176px] lg:w-[220px] absolute bottom-[4%] right-[3%] sm:right-[6%] md:right-[10%]',
+      'about-hide-mobile w-[130px] sm:w-[170px] md:w-[176px] lg:w-[220px] absolute bottom-[6%] right-[1%] sm:right-[4%] md:right-[8%]',
     animClass: 'icon-float icon-phase-7',
     fadeIn: { delay: 0.3, x: 80, y: 0, duration: 0.9 },
   },
