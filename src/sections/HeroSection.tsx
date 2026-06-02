@@ -31,7 +31,7 @@ const HeroSection = () => {
         ([entry]) => {
           if (entry.isIntersecting) setActiveSection(id)
         },
-        { rootMargin: '-40% 0px -55% 0px' }
+        { rootMargin: '-20% 0px -60% 0px', threshold: 0 }
       )
       observer.observe(el)
       observers.push(observer)
@@ -139,6 +139,7 @@ const HeroSection = () => {
             }`}
             onClick={(e) => {
               e.preventDefault()
+              setActiveSection(link.toLowerCase())
               smoothScrollTo(link.toLowerCase())
             }}
           >
