@@ -151,7 +151,7 @@ const contactDecorativeImages = [
     fadeIn: { delay: 0.25, x: -80, y: 0, duration: 0.9 },
   },
   {
-    src: '/Glass Connection Network.webp',
+    src: '/images/optimized/Glass Connection Network-opt.webp',
     alt: 'Glass Connection Network 3D icon',
     className:
       'about-hide-mobile w-[120px] sm:w-[160px] md:w-[168px] lg:w-[210px] absolute top-[4%] right-[1%] sm:right-[2%] md:right-[4%]',
@@ -159,7 +159,7 @@ const contactDecorativeImages = [
     fadeIn: { delay: 0.15, x: 80, y: 0, duration: 0.9 },
   },
   {
-    src: '/Glass Paper Plane.webp',
+    src: '/images/optimized/Glass Paper Plane-opt.webp',
     alt: 'Glass Paper Plane 3D icon',
     className:
       'about-hide-mobile w-[130px] sm:w-[170px] md:w-[176px] lg:w-[220px] absolute bottom-[8%] right-[3%] sm:right-[6%] md:right-[10%]',

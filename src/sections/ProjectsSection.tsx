@@ -28,10 +28,10 @@ const projects: ProjectData[] = [
     techStack: ['React.js', 'FastAPI', 'Gemini AI', 'Web Speech API'],
     highlights: ['15+ users tested', 'Real-time voice analysis', 'Gemini API integration'],
     col1Images: [
-      '/Orato AI Home Dashboard.png',
-      '/Interview Practice screen.png',
+      '/images/optimized/Orato AI Home Dashboard-1200.webp',
+      '/images/optimized/Interview Practice screen-1200.webp',
     ],
-    col2Image: '/AI Feedback screen.png',
+    col2Image: '/images/optimized/AI Feedback screen-1200.webp',
     liveUrl: 'https://oratoai.base44.app/',
   },
   {
@@ -42,10 +42,10 @@ const projects: ProjectData[] = [
     techStack: ['Python', 'FastAPI', 'RoBERTa', 'XLM-R', 'LIME'],
     highlights: ['91% accuracy', '50+ languages', 'React analytics dashboard'],
     col1Images: [
-      '/Live Prediction Page.png',
-      '/Multilingual Analysis Page.png',
+      '/images/optimized/Live Prediction Page-1200.webp',
+      '/images/optimized/Multilingual Analysis Page-1200.webp',
     ],
-    col2Image: '/Home Page.png',
+    col2Image: '/images/optimized/Home Page-1200.webp',
     liveUrl: 'https://github.com/amansethhh/ReviewSense-Analytics',
     buttonLabel: 'View Code',
   },
@@ -57,10 +57,10 @@ const projects: ProjectData[] = [
     techStack: ['Next.js', 'TypeScript', 'Three.js', 'Framer Motion', 'TailwindCSS'],
     highlights: ['3D interface design', 'Animation systems', 'Responsive architecture'],
     col1Images: [
-      '/Hero Section.png',
-      '/Tech Stack Section.png',
+      '/images/optimized/Hero Section-1200.webp',
+      '/images/optimized/Tech Stack Section-1200.webp',
     ],
-    col2Image: '/About Section.png',
+    col2Image: '/images/optimized/About Section-1200.webp',
     buttonLabel: 'Live Website',
   },
 ]
@@ -140,26 +140,35 @@ const ProjectCard = ({
         <div className="w-[40%] flex flex-col gap-3 sm:gap-4">
           <img
             src={project.col1Images[0]}
+            srcSet={`${project.col1Images[0].replace('-1200.webp', '-800.webp')} 800w, ${project.col1Images[0]} 1200w`}
+            sizes="(max-width: 768px) 40vw, 480px"
             alt={`${project.name} screenshot 1`}
             className={`w-full ${imgRadius} object-cover`}
             style={{ height: isMobile ? 'clamp(80px, 14vw, 130px)' : 'clamp(130px, 16vw, 230px)' }}
             loading="lazy"
+            decoding="async"
           />
           <img
             src={project.col1Images[1]}
+            srcSet={`${project.col1Images[1].replace('-1200.webp', '-800.webp')} 800w, ${project.col1Images[1]} 1200w`}
+            sizes="(max-width: 768px) 40vw, 480px"
             alt={`${project.name} screenshot 2`}
             className={`w-full ${imgRadius} object-cover`}
             style={{ height: isMobile ? 'clamp(100px, 18vw, 180px)' : 'clamp(160px, 22vw, 340px)' }}
             loading="lazy"
+            decoding="async"
           />
         </div>
         {/* Right column - 60% */}
         <div className="w-[60%]">
           <img
             src={project.col2Image}
+            srcSet={`${project.col2Image.replace('-1200.webp', '-800.webp')} 800w, ${project.col2Image} 1200w`}
+            sizes="(max-width: 768px) 60vw, 720px"
             alt={`${project.name} screenshot 3`}
             className={`w-full h-full ${imgRadius} object-cover`}
             loading="lazy"
+            decoding="async"
           />
         </div>
       </div>

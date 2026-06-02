@@ -9,7 +9,7 @@ import {
 } from 'framer-motion'
 import ContactButton from '../components/ContactButton'
 
-const AVATAR_URL = '/avatar-main.webp'
+const AVATAR_URL = '/images/optimized/avatar-1200.webp'
 const NAV_LINKS = ['About', 'Experience', 'Projects', 'Contact']
 const EASE: [number, number, number, number] = [0.25, 0.1, 0.25, 1]
 
@@ -153,9 +153,13 @@ const HeroSection = () => {
           >
             <img
               src={AVATAR_URL}
+              srcSet="/images/optimized/avatar-480.webp 480w, /images/optimized/avatar-768.webp 768w, /images/optimized/avatar-1200.webp 1200w"
+              sizes="(max-width: 480px) 280px, (max-width: 768px) 400px, 600px"
               alt="Aman Seth"
               draggable={false}
               className="hero-portrait"
+              fetchPriority="high"
+              decoding="async"
             />
           </motion.div>
         </motion.div>
