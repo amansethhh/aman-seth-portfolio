@@ -1,8 +1,4 @@
-# DEPLOYMENT NOTE:
-# Replace "https://YOUR_DOMAIN_HERE" with your actual deployment URL.
-# Example: https://amanseth.dev
-
 User-agent: *
 Allow: /
 
-Sitemap: https://YOUR_DOMAIN_HERE/sitemap.xml
+Sitemap: https://aman-seth-portfolio.vercel.app/sitemap.xml

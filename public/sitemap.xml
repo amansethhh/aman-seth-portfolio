@@ -1,13 +1,8 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">
-  <!--
-    DEPLOYMENT NOTE:
-    Replace "https://YOUR_DOMAIN_HERE" with your actual deployment URL.
-    Example: https://amanseth.dev
-  -->
   <url>
-    <loc>https://YOUR_DOMAIN_HERE/</loc>
-    <lastmod>2026-06-01</lastmod>
+    <loc>https://aman-seth-portfolio.vercel.app/</loc>
+    <lastmod>2026-06-02</lastmod>
     <changefreq>monthly</changefreq>
     <priority>1.0</priority>
   </url>
