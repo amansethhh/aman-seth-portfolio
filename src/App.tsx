@@ -8,6 +8,8 @@ import ServicesSection from './sections/ServicesSection'
 import ProjectsSection from './sections/ProjectsSection'
 import ContactSection from './sections/ContactSection'
 import Footer from './sections/Footer'
+import { Analytics } from '@vercel/analytics/react'
+import { SpeedInsights } from '@vercel/speed-insights/react'
 
 const App = () => {
   return (
@@ -22,6 +24,8 @@ const App = () => {
       <ProjectsSection />
       <ContactSection />
       <Footer />
+      <Analytics />
+      <SpeedInsights />
     </div>
   )
 }

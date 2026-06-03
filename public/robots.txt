@@ -1,4 +1,5 @@
 User-agent: *
 Allow: /
+Disallow: /images/original/
 
-Sitemap: https://aman-seth-portfolio.vercel.app/sitemap.xml
+Sitemap: https://amanseth.dev/sitemap.xml

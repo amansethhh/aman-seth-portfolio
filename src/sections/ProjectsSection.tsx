@@ -61,7 +61,7 @@ const projects: ProjectData[] = [
       '/images/optimized/Tech Stack Section-1200.webp',
     ],
     col2Image: '/images/optimized/About Section-1200.webp',
-    liveUrl: 'https://aman-seth-portfolio.vercel.app/',
+    liveUrl: 'https://amanseth.dev/',
     buttonLabel: 'Live Website',
   },
 ]
