@@ -41,21 +41,6 @@
 
 <br/>
 
-## 🚀 Live Portfolio
-
-<div align="center">
-
-### **[✨ amanseth.dev ✨](https://amanseth.dev)**
-
-*A production-grade interactive developer portfolio built with React 19, TypeScript, and Framer Motion.*
-*Features a premium dark aesthetic with glassmorphism design, scroll-driven animations, and pixel-perfect responsiveness.*
-
-<br/>
-
-</div>
-
----
-
 ## 📸 Portfolio Highlights
 
 <div align="center">
