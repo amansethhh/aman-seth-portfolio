@@ -1,7 +1,7 @@
 <div align="center">
 
 <!-- Typing SVG Banner -->
-<a href="https://aman-seth-portfolio.vercel.app">
+<a href="https://amanseth.dev">
 <img src="https://readme-typing-svg.demolab.com?font=Outfit&weight=700&size=36&duration=3000&pause=1000&color=A855F7&center=true&vCenter=true&multiline=true&repeat=true&width=700&height=100&lines=Aman+Seth;Full-Stack+Python+Developer" alt="Aman Seth — Full-Stack Python Developer" />
 </a>
 
@@ -12,11 +12,11 @@
 <br/><br/>
 
 <!-- Social & Professional Badges -->
-[![Portfolio](https://img.shields.io/badge/Portfolio-aman--seth-A855F7?style=for-the-badge&logo=vercel&logoColor=white)](https://aman-seth-portfolio.vercel.app)
+[![Portfolio](https://img.shields.io/badge/Portfolio-amanseth.dev-A855F7?style=for-the-badge&logo=vercel&logoColor=white)](https://amanseth.dev)
 [![LinkedIn](https://img.shields.io/badge/LinkedIn-Aman_Seth-0A66C2?style=for-the-badge&logo=linkedin&logoColor=white)](https://www.linkedin.com/in/aman-seth-a03b42257/)
 [![GitHub](https://img.shields.io/badge/GitHub-amansethhh-181717?style=for-the-badge&logo=github&logoColor=white)](https://github.com/amansethhh)
 [![Email](https://img.shields.io/badge/Email-contact-EA4335?style=for-the-badge&logo=gmail&logoColor=white)](mailto:amanrseth@gmail.com)
-[![Resume](https://img.shields.io/badge/Resume-Download_PDF-7C3AED?style=for-the-badge&logo=readthedocs&logoColor=white)](https://aman-seth-portfolio.vercel.app/Aman_Seth_Full-Stack_Python_Developer_Resume.pdf)
+[![Resume](https://img.shields.io/badge/Resume-Download_PDF-7C3AED?style=for-the-badge&logo=readthedocs&logoColor=white)](https://amanseth.dev/Aman_Seth_Full-Stack_Python_Developer_Resume.pdf)
 
 <br/>
 
@@ -45,7 +45,7 @@
 
 <div align="center">
 
-### **[✨ aman-seth-portfolio.vercel.app ✨](https://aman-seth-portfolio.vercel.app)**
+### **[✨ amanseth.dev ✨](https://amanseth.dev)**
 
 *A production-grade interactive developer portfolio built with React 19, TypeScript, and Framer Motion.*
 *Features a premium dark aesthetic with glassmorphism design, scroll-driven animations, and pixel-perfect responsiveness.*
@@ -313,7 +313,7 @@ A premium interactive developer platform featuring advanced animations, responsi
 - Animation systems
 - Responsive architecture
 
-[![Live Website](https://img.shields.io/badge/Live_Website-Portfolio-A855F7?style=for-the-badge&logo=vercel&logoColor=white)](https://aman-seth-portfolio.vercel.app/)
+[![Live Website](https://img.shields.io/badge/Live_Website-Portfolio-A855F7?style=for-the-badge&logo=vercel&logoColor=white)](https://amanseth.dev/)
 
 </td>
 
@@ -427,7 +427,7 @@ I am actively seeking **Full-Stack Developer**, **Backend Engineer**, or **AI Ap
 
 <div align="center">
 
-[![Portfolio](https://img.shields.io/badge/Portfolio-aman--seth-A855F7?style=for-the-badge&logo=vercel&logoColor=white)](https://aman-seth-portfolio.vercel.app)
+[![Portfolio](https://img.shields.io/badge/Portfolio-amanseth.dev-A855F7?style=for-the-badge&logo=vercel&logoColor=white)](https://amanseth.dev)
 [![LinkedIn](https://img.shields.io/badge/LinkedIn-Aman_Seth-0A66C2?style=for-the-badge&logo=linkedin&logoColor=white)](https://www.linkedin.com/in/aman-seth-a03b42257/)
 [![GitHub](https://img.shields.io/badge/GitHub-amansethhh-181717?style=for-the-badge&logo=github&logoColor=white)](https://github.com/amansethhh)
 [![Email](https://img.shields.io/badge/Email-contact-EA4335?style=for-the-badge&logo=gmail&logoColor=white)](mailto:amanrseth@gmail.com)
