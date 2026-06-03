@@ -1,8 +1,8 @@
 <div align="center">
 
 <!-- Typing SVG Banner -->
-<a href="https://amanseth.dev">
-  <img src="https://readme-typing-svg.demolab.com?font=Outfit&weight=700&size=36&duration=3000&pause=1000&color=A855F7&center=true&vCenter=true&multiline=true&repeat=true&width=700&height=100&lines=Aman+Seth;Full-Stack+Python+Developer" alt="Aman Seth — Full-Stack Python Developer" />
+<a href="https://aman-seth-portfolio.vercel.app">
+<img src="https://readme-typing-svg.demolab.com?font=Outfit&weight=700&size=36&duration=3000&pause=1000&color=A855F7&center=true&vCenter=true&multiline=true&repeat=true&width=700&height=100&lines=Aman+Seth;Full-Stack+Python+Developer" alt="Aman Seth — Full-Stack Python Developer" />
 </a>
 
 <br/>
@@ -12,11 +12,11 @@
 <br/><br/>
 
 <!-- Social & Professional Badges -->
-[![Portfolio](https://img.shields.io/badge/Portfolio-amanseth.dev-A855F7?style=for-the-badge&logo=vercel&logoColor=white)](https://amanseth.dev)
+[![Portfolio](https://img.shields.io/badge/Portfolio-aman--seth-A855F7?style=for-the-badge&logo=vercel&logoColor=white)](https://aman-seth-portfolio.vercel.app)
 [![LinkedIn](https://img.shields.io/badge/LinkedIn-Aman_Seth-0A66C2?style=for-the-badge&logo=linkedin&logoColor=white)](https://www.linkedin.com/in/aman-seth-a03b42257/)
 [![GitHub](https://img.shields.io/badge/GitHub-amansethhh-181717?style=for-the-badge&logo=github&logoColor=white)](https://github.com/amansethhh)
 [![Email](https://img.shields.io/badge/Email-contact-EA4335?style=for-the-badge&logo=gmail&logoColor=white)](mailto:amanrseth@gmail.com)
-[![Resume](https://img.shields.io/badge/Resume-Download_PDF-7C3AED?style=for-the-badge&logo=readthedocs&logoColor=white)](https://amanseth.dev/Aman_Seth_Full-Stack_Python_Developer_Resume.pdf)
+[![Resume](https://img.shields.io/badge/Resume-Download_PDF-7C3AED?style=for-the-badge&logo=readthedocs&logoColor=white)](https://aman-seth-portfolio.vercel.app/Aman_Seth_Full-Stack_Python_Developer_Resume.pdf)
 
 <br/>
 
@@ -45,16 +45,10 @@
 
 <div align="center">
 
-### **[✨ amanseth.dev ✨](https://amanseth.dev)**
+### **[✨ aman-seth-portfolio.vercel.app ✨](https://aman-seth-portfolio.vercel.app)**
 
 *A production-grade interactive developer portfolio built with React 19, TypeScript, and Framer Motion.*
 *Features a premium dark aesthetic with glassmorphism design, scroll-driven animations, and pixel-perfect responsiveness.*
-
-| Domain | Purpose |
-|--------|---------|
-| [amanseth.dev](https://amanseth.dev) | Primary production domain |
-| [www.amanseth.dev](https://www.amanseth.dev) | WWW redirect |
-| [amanseth.vercel.app](https://amanseth.vercel.app) | Vercel deployment backup |
 
 <br/>
 
@@ -66,21 +60,27 @@
 
 <div align="center">
 
+### Live Portfolio Walkthrough
+
+<img src="public/portfolio-walkthrough.gif" alt="Portfolio Walkthrough" width="90%"/>
+
+<br/><br/>
+
 ### Hero Section — Full-Screen Interactive Landing
 
-<img src="public/Hero Section.png" alt="Hero Section — Full-screen intro with parallax effects, animated typography, and scroll-driven portrait zoom" width="90%"/>
+<img src="public/Github Hero Section.png" alt="Hero Section — Full-screen intro with parallax effects, animated typography, and scroll-driven portrait zoom" width="90%"/>
 
 <br/><br/>
 
 ### Tech Stack — Interactive Technology Grid
 
-<img src="public/Tech Stack Section.png" alt="Tech Stack Section — Categorized skill grid with staggered reveal animations and floating 3D icons" width="90%"/>
+<img src="public/Github Tech Stack Section.png" alt="Tech Stack Section — Categorized skill grid with staggered reveal animations and floating 3D icons" width="90%"/>
 
 <br/><br/>
 
 ### About Section — Animated Story & Background
 
-<img src="public/About Section.png" alt="About Section — Word-by-word text reveal with floating decorative 3D icons and glassmorphism cards" width="90%"/>
+<img src="public/Github About Section.png" alt="About Section — Word-by-word text reveal with floating decorative 3D icons and glassmorphism cards" width="90%"/>
 
 </div>
 
@@ -99,8 +99,8 @@ This portfolio was **architecturally designed** and **iteratively engineered** o
 | **Responsive Architecture** | Tested across 13 breakpoints (320px → 1920px), pixel-perfect on mobile and desktop |
 | **Performance Engineering** | WebP responsive images, lazy loading, CLS = 0, optimized bundle (~114 KB gzip JS) |
 | **Accessibility** | `prefers-reduced-motion` compliance, 44px touch targets, WCAG AA contrast, skip-to-content |
-| **SEO** | Canonical URLs, Open Graph, Twitter Cards, JSON-LD structured data, sitemap.xml, robots.txt |
-| **Production Deployment** | Custom domain (amanseth.dev), Vercel CI/CD, zero-downtime deploys |
+| **SEO** | Canonical URLs, Open Graph, Twitter Cards, sitemap.xml, robots.txt, semantic HTML |
+| **Production Deployment** | Vercel CI/CD, zero-downtime deploys, production-hardened build pipeline |
 
 Every section, every animation, and every responsive breakpoint was **intentionally engineered** — not auto-generated.
 
@@ -133,7 +133,7 @@ Parallax effects, fade-in reveals, animated counters, sticky-scroll cards, and s
 <td width="50%">
 
 ### 🔍 SEO & Performance
-Lighthouse-optimized with canonical URLs, Open Graph metadata, JSON-LD structured data, responsive WebP images, lazy loading, and CLS = 0.
+Lighthouse-optimized with canonical URLs, Open Graph metadata, responsive WebP images, lazy loading, and CLS = 0.
 
 </td>
 </tr>
@@ -147,7 +147,7 @@ Lighthouse-optimized with canonical URLs, Open Graph metadata, JSON-LD structure
 <td width="50%">
 
 ### 🚀 Production Hardened
-Custom domain (amanseth.dev), Vercel deployment with automatic builds, TypeScript strict mode, Vercel Analytics + Speed Insights, zero build warnings.
+Vercel deployment with automatic builds from `main`, TypeScript strict mode, zero build warnings, production-grade asset pipeline.
 
 </td>
 </tr>
@@ -208,49 +208,49 @@ Custom domain (amanseth.dev), Vercel deployment with automatic builds, TypeScrip
 ## 🏗️ Project Architecture
 
 ```
-amanseth.dev/
-├── public/                              # Static assets served at root
-│   ├── images/
-│   │   ├── original/                    # Source PNGs (non-destructive workflow)
-│   │   └── optimized/                   # Multi-resolution WebP variants
-│   ├── og-image.png                     # Open Graph social preview (1200×630)
-│   ├── favicon.png                      # Browser tab icon
-│   ├── sitemap.xml                      # Search engine sitemap
-│   ├── robots.txt                       # Crawler directives
-│   ├── Aman_Seth_*.pdf                  # Downloadable resume
-│   └── *.webp                           # 3D decorative icons
+aman-seth-portfolio/
+├── public/ # Static assets served at root
+│ ├── images/
+│ │ ├── original/ # Source PNGs (non-destructive workflow)
+│ │ └── optimized/ # Multi-resolution WebP variants
+│ ├── og-image.png # Open Graph social preview (1200×630)
+│ ├── favicon.png # Browser tab icon
+│ ├── sitemap.xml # Search engine sitemap
+│ ├── robots.txt # Crawler directives
+│ ├── Aman_Seth_*.pdf # Downloadable resume
+│ └── *.webp # 3D decorative icons
 │
 ├── src/
-│   ├── components/                      # Reusable UI primitives
-│   │   ├── AnimatedText.tsx             # Scroll-driven word-by-word text reveal
-│   │   ├── ContactButton.tsx            # Gradient CTA with glow effect
-│   │   ├── FadeIn.tsx                   # Intersection Observer fade wrapper
-│   │   ├── LiveProjectButton.tsx        # Animated project link button
-│   │   └── ReactivateIcon.tsx           # Lazy-loaded image with viewport trigger
-│   │
-│   ├── sections/                        # Full-page sections (render order)
-│   │   ├── HeroSection.tsx              # Parallax intro + nav + active tracking
-│   │   ├── MarqueeSection.tsx           # Infinite scrolling tech marquee
-│   │   ├── AboutSection.tsx             # Animated bio with decorative 3D icons
-│   │   ├── TechStackSection.tsx         # Interactive skill grid with stagger
-│   │   ├── ExperienceSection.tsx        # Timeline + animated stat counters
-│   │   ├── ServicesSection.tsx          # Sticky-scroll service showcase
-│   │   ├── ProjectsSection.tsx          # Full-bleed project cards with zoom
-│   │   ├── ContactSection.tsx           # Multi-channel contact methods
-│   │   └── Footer.tsx                   # Site footer
-│   │
-│   ├── hooks/
-│   │   └── useIsMobile.ts              # Responsive breakpoint hook
-│   │
-│   ├── App.tsx                          # Root component + section orchestration
-│   ├── main.tsx                         # Application entry point
-│   └── index.css                        # Global design system (~2000 lines)
+│ ├── components/ # Reusable UI primitives
+│ │ ├── AnimatedText.tsx # Scroll-driven word-by-word text reveal
+│ │ ├── ContactButton.tsx # Gradient CTA with glow effect
+│ │ ├── FadeIn.tsx # Intersection Observer fade wrapper
+│ │ ├── LiveProjectButton.tsx # Animated project link button
+│ │ └── ReactivateIcon.tsx # Lazy-loaded image with viewport trigger
+│ │
+│ ├── sections/ # Full-page sections (render order)
+│ │ ├── HeroSection.tsx # Parallax intro + nav + active tracking
+│ │ ├── MarqueeSection.tsx # Infinite scrolling tech marquee
+│ │ ├── AboutSection.tsx # Animated bio with decorative 3D icons
+│ │ ├── TechStackSection.tsx # Interactive skill grid with stagger
+│ │ ├── ExperienceSection.tsx # Timeline + animated stat counters
+│ │ ├── ServicesSection.tsx # Sticky-scroll service showcase
+│ │ ├── ProjectsSection.tsx # Full-bleed project cards with zoom
+│ │ ├── ContactSection.tsx # Multi-channel contact methods
+│ │ └── Footer.tsx # Site footer
+│ │
+│ ├── hooks/
+│ │ └── useIsMobile.ts # Responsive breakpoint hook
+│ │
+│ ├── App.tsx # Root component + section orchestration
+│ ├── main.tsx # Application entry point
+│ └── index.css # Global design system (~2000 lines)
 │
-├── index.html                           # HTML template with full SEO metadata
-├── vite.config.ts                       # Vite + React plugin configuration
-├── tailwind.config.js                   # Tailwind CSS configuration
-├── tsconfig.json                        # TypeScript strict mode configuration
-└── package.json                         # Dependencies and build scripts
+├── index.html # HTML template with full SEO metadata
+├── vite.config.ts # Vite + React plugin configuration
+├── tailwind.config.js # Tailwind CSS configuration
+├── tsconfig.json # TypeScript strict mode configuration
+└── package.json # Dependencies and build scripts
 ```
 
 ---
@@ -313,7 +313,7 @@ A premium interactive developer platform featuring advanced animations, responsi
 - Animation systems
 - Responsive architecture
 
-[![Live Website](https://img.shields.io/badge/Live_Website-amanseth.dev-A855F7?style=for-the-badge&logo=vercel&logoColor=white)](https://amanseth.dev)
+[![Live Website](https://img.shields.io/badge/Live_Website-Portfolio-A855F7?style=for-the-badge&logo=vercel&logoColor=white)](https://aman-seth-portfolio.vercel.app/)
 
 </td>
 
@@ -322,20 +322,18 @@ A premium interactive developer platform featuring advanced animations, responsi
 
 ---
 
-## ⚡ Performance & Production
+## ⚡ Performance Optimizations
 
 | Optimization | Implementation |
 |-------------|---------------|
-| **Responsive Images** | Multi-resolution WebP variants (480w, 768w, 1200w) with `srcSet` and `sizes` |
-| **Asset Pipeline** | Non-destructive workflow — original PNGs preserved, optimized WebP derivatives |
-| **Lazy Loading** | `IntersectionObserver`-based image loading via `ReactivateIcon` component |
+| **Responsive Images** | Multi-resolution WebP variants (480w, 768w, 1200w) with `srcSet` and `sizes` attributes |
+| **Asset Pipeline** | Non-destructive workflow — original PNGs preserved, optimized WebP derivatives generated |
+| **Lazy Loading** | `IntersectionObserver`-based image loading with `ReactivateIcon` component |
 | **CLS Prevention** | All images have explicit dimensions; absolute-positioned decorative elements |
-| **Bundle Size** | ~38 KB CSS (gzip: 8.5 KB) + ~364 KB JS (gzip: 114 KB) |
+| **Bundle Optimization** | ~38 KB CSS (gzip: 8.5 KB) + ~364 KB JS (gzip: 114 KB) |
 | **Reduced Motion** | Full `prefers-reduced-motion` compliance — all animations disabled gracefully |
-| **SEO** | Canonical URL, Open Graph, Twitter Cards, JSON-LD, sitemap.xml, robots.txt |
-| **Analytics** | Vercel Analytics + Speed Insights for production monitoring |
-| **Custom Domain** | amanseth.dev with SSL, www redirect, and Vercel backup |
-| **Deployment** | Vercel with automatic builds from `main`, zero-downtime deploys |
+| **SEO** | Canonical URL, Open Graph, Twitter Cards, sitemap.xml, robots.txt, semantic HTML |
+| **Deployment** | Vercel with automatic builds from `main` branch, zero-downtime deploys |
 
 ---
 
@@ -375,20 +373,6 @@ npm run preview
 ```
 
 Output is written to the `dist/` directory with optimized assets.
-
----
-
-## 🌐 Domain & Deployment
-
-| Configuration | Value |
-|--------------|-------|
-| **Primary Domain** | [amanseth.dev](https://amanseth.dev) |
-| **WWW Redirect** | [www.amanseth.dev](https://www.amanseth.dev) → amanseth.dev |
-| **Vercel Backup** | [amanseth.vercel.app](https://amanseth.vercel.app) |
-| **SSL** | ✅ Automatic via Vercel |
-| **CDN** | ✅ Vercel Edge Network |
-| **CI/CD** | Automatic builds from `main` branch |
-| **Analytics** | Vercel Analytics + Speed Insights |
 
 ---
 
@@ -440,9 +424,15 @@ While this is a personal portfolio, contributions and suggestions are welcome:
 I am actively seeking **Full-Stack Developer**, **Backend Engineer**, or **AI Application Developer** opportunities. Open to full-time roles, internships, and collaboration on impactful projects.
 
 **Let's connect:**
-[Portfolio](https://amanseth.dev) · [LinkedIn](https://www.linkedin.com/in/aman-seth-a03b42257/) · [Email](mailto:amanrseth@gmail.com) · [GitHub](https://github.com/amansethhh)
 
----
+<div align="center">
+
+[![Portfolio](https://img.shields.io/badge/Portfolio-aman--seth-A855F7?style=for-the-badge&logo=vercel&logoColor=white)](https://aman-seth-portfolio.vercel.app)
+[![LinkedIn](https://img.shields.io/badge/LinkedIn-Aman_Seth-0A66C2?style=for-the-badge&logo=linkedin&logoColor=white)](https://www.linkedin.com/in/aman-seth-a03b42257/)
+[![GitHub](https://img.shields.io/badge/GitHub-amansethhh-181717?style=for-the-badge&logo=github&logoColor=white)](https://github.com/amansethhh)
+[![Email](https://img.shields.io/badge/Email-contact-EA4335?style=for-the-badge&logo=gmail&logoColor=white)](mailto:amanrseth@gmail.com)
+
+</div>
 
 ## 📄 License
 
@@ -454,9 +444,7 @@ MIT License — see [LICENSE](LICENSE) for details.
 
 <br/>
 
-**Designed & Engineered by Aman Seth**
-
-*Building software that solves real problems.*
+**Built with ❤️ by <a href="https://github.com/amansethhh">amansethhh</a>**
 
 <br/>
 
