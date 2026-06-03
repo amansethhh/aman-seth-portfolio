@@ -15,7 +15,7 @@
 [![Portfolio](https://img.shields.io/badge/Portfolio-amanseth.dev-A855F7?style=for-the-badge&logo=vercel&logoColor=white)](https://amanseth.dev)
 [![LinkedIn](https://img.shields.io/badge/LinkedIn-Aman_Seth-0A66C2?style=for-the-badge&logo=linkedin&logoColor=white)](https://www.linkedin.com/in/aman-seth-a03b42257/)
 [![GitHub](https://img.shields.io/badge/GitHub-amansethhh-181717?style=for-the-badge&logo=github&logoColor=white)](https://github.com/amansethhh)
-[![Email](https://img.shields.io/badge/Email-contact-EA4335?style=for-the-badge&logo=gmail&logoColor=white)](mailto:amanrseth@gmail.com)
+[![Email](https://img.shields.io/badge/Email-contact-EA4335?style=for-the-badge&logo=gmail&logoColor=white)](https://mail.google.com/mail/?view=cm&fs=1&to=amansethatwork@gmail.com)
 [![Resume](https://img.shields.io/badge/Resume-Download_PDF-7C3AED?style=for-the-badge&logo=readthedocs&logoColor=white)](https://amanseth.dev/Aman_Seth_Full-Stack_Python_Developer_Resume.pdf)
 
 <br/>
