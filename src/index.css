@@ -1758,11 +1758,17 @@ body {
 
   .ts-core-grid {
     gap: 12px;
+    max-width: 320px;
+    margin: 0 auto;
+  }
+
+  .ts-core-grid > * {
+    width: 100%;
   }
 
   .ts-core-card {
     width: 100%;
-    max-width: 280px;
+    max-width: none;
   }
 
   .ts-categories {
