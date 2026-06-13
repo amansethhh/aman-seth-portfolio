@@ -177,7 +177,7 @@ const ExperienceSection = () => {
                   Data Science &amp; Analytics Intern
                 </h3>
                 <p className="exp-card__company">
-                  Imarticus Learning Pvt. Ltd. · Mumbai
+                  Imarticus Learning Pvt. Ltd. - Thane, Maharashtra, India
                 </p>
               </div>
               <span className="exp-card__date">
